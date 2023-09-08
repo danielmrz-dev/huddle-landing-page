@@ -46,30 +46,27 @@ main > div.imagem > img {
     padding: 10px 30px 0 30px;
 }
 
-div.text > h1, p {
+div.text_and_button > section > h1, p {
     padding: 0 55px;
     color: white;
     text-align: center;
 }
 
-div.text > h1 {
+div.text_and_button > section > h1 {
     font-family: var(--font01);
     text-align: center;
-    font-size: 1.4em;
-    font-weight: 600;
+    font-size: 1.25em;
+    font-weight: 700;
 }
 
-div.text > p {
+div.text_and_button > section > p {
     font-family: var(--font02);
     font-size: .85em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-div.button {
-    display: flex;
-    justify-content: center;
-}
-div.button > a {
+main > div.text_and_button > a {
+    display: block;
     text-align: center;
     font-family: var(--font02);
     font-size: .9em;
@@ -78,12 +75,12 @@ div.button > a {
     color: var(--color01);
     width: 200px;
     padding: 10px;
-    margin: 10px;
+    margin: 10px auto;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452);
 }
 
-div.button > a:hover {
+main > div.text_and_button > a:hover {
     cursor: pointer;
     background-color: var(--color02);
     color: white;
@@ -98,10 +95,10 @@ main > div.socialmedia {
 .fa {
     border: 1px solid white;
     color: white;
-    padding: 12px;
-    margin: 0px 10px 0 10px;
-    font-size: 15px;
-    width: 15px;
+    padding: 10px;
+    margin: 0px 0px 0 8px;
+    font-size: 20px;
+    width: 20px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
@@ -115,4 +112,80 @@ main > div.socialmedia {
 
 footer {
     display: none;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: block;
+        width: 100vw;
+        background-size: cover;
+        position: relative;
+    }
+
+    header {
+        padding: 40px 0 15px 60px;
+    }
+
+    header > img {
+        height: 50px;
+    }    
+
+    main {
+        flex-direction: row;
+    }
+
+    main > div.imagem {
+        margin: ;
+        height: 50vh;
+        width: 60vw; /*683*/
+    }
+
+    main > div.imagem > img {
+        margin: 0;
+        height: 70vh;
+        width: 45vw;
+    }
+
+    div.text_and_button {
+
+        width: 520px;
+    }
+
+    div.text_and_button > section > h1 {
+        font-size: 3.1vw;
+        text-align: start;
+        font-weight: 600;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    div.text_and_button > section > p {
+        text-align: left;
+        font-size: 1.4vw;
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+    }
+
+    main > div.text_and_button > a {
+        width: 150px;
+        padding: 10px;
+        margin: 25px 0px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452);
+        position: relative;
+    }
+
+    main > div.socialmedia {
+        position: absolute;
+
+        top: 86vh;
+        left: 74vw;
+    }
+
+    main > div.socialmedia > a {
+        margin: 0 8px;
+    }
+
+
 }
